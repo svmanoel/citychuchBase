@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&family=Red+Hat+Display:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Colours */
+  --primary: #71B9BE;
+  --accent: #FFEB3B;
+  --coral: #F26B5E;
+
+  --text: #2F3437;
+  --background: #FAF8F2;
+
+  /* Fonts */
+  --font-title: 'League Spartan', sans-serif;
+  --font-subtitle: 'Red Hat Display', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font-body);
+}

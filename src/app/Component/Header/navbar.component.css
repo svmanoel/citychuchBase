@@ -1,0 +1,478 @@
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+  width: 100%;
+  background: var(--background);
+  border-bottom: 1px solid rgba(47, 52, 55, 0.08);
+
+  position: sticky;
+  top: 0;
+
+  z-index: 1000;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.navbar-container {
+  max-width: 1400px;
+  height: 90px;
+
+  margin: auto;
+  padding: 0 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+
+  line-height: 0.85;
+
+  transition: transform 0.3s ease;
+}
+
+
+.logo:hover {
+  transform: scale(1.03);
+}
+
+
+.logo-main {
+  font-family: var(--font-title);
+
+  font-size: 28px;
+  font-weight: 800;
+
+  letter-spacing: -1px;
+
+  color: var(--primary);
+}
+
+
+.logo-secondary {
+  font-family: var(--font-title);
+
+  font-size: 28px;
+  font-weight: 800;
+
+  letter-spacing: -1px;
+
+  color: var(--text);
+}
+
+
+/* =========================================
+   DESKTOP NAVIGATION
+========================================= */
+
+.nav-menu {
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+
+  height: 100%;
+}
+
+
+.nav-item {
+  position: relative;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* Links */
+
+.nav-link {
+  font-family: var(--font-subtitle);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+
+  color: var(--text);
+
+  text-decoration: none;
+
+  background: none;
+  border: none;
+
+  cursor: pointer;
+
+  transition: color 0.25s ease;
+
+  white-space: nowrap;
+}
+
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+
+/* =========================================
+   DROPDOWN
+========================================= */
+
+.dropdown-toggle {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+
+.chevron {
+  font-size: 15px;
+
+  color: var(--primary);
+
+  transition: transform 0.25s ease;
+}
+
+
+.chevron.rotate {
+  transform: rotate(180deg);
+}
+
+
+/* Dropdown container */
+
+.dropdown-menu {
+  position: absolute;
+
+  top: 72px;
+  left: 0;
+
+  min-width: 220px;
+
+  padding: 12px 0;
+
+  background: var(--background);
+
+  border: 1px solid rgba(47, 52, 55, 0.08);
+
+  box-shadow:
+    0 18px 40px rgba(47, 52, 55, 0.12);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s;
+}
+
+
+.dropdown-menu.show {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+
+.dropdown-menu a {
+  display: block;
+
+  padding: 13px 20px;
+
+  font-family: var(--font-body);
+
+  font-size: 14px;
+
+  color: var(--text);
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.dropdown-menu a:hover {
+  background: rgba(113, 185, 190, 0.12);
+
+  color: var(--primary);
+}
+
+
+/* =========================================
+   CTA BUTTON
+========================================= */
+
+.cta-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 22px;
+
+  background: var(--accent);
+
+  color: var(--text);
+
+  font-family: var(--font-subtitle);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+
+  text-decoration: none;
+
+  border-radius: 2px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.cta-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(47, 52, 55, 0.15);
+}
+
+
+/* =========================================
+   HAMBURGER BUTTON
+========================================= */
+
+.menu-button {
+  display: none;
+
+  width: 46px;
+  height: 46px;
+
+  background: transparent;
+
+  border: none;
+
+  cursor: pointer;
+
+  padding: 10px;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 6px;
+}
+
+
+.menu-button span {
+  width: 26px;
+  height: 2px;
+
+  background: var(--text);
+
+  display: block;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+
+/* =========================================
+   TABLET & MOBILE
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .navbar-container {
+    height: 76px;
+
+    padding: 0 28px;
+  }
+
+
+  /* Show hamburger */
+
+  .menu-button {
+    display: flex;
+  }
+
+
+  /* Navigation */
+
+  .nav-menu {
+    position: absolute;
+
+    top: 76px;
+    left: 0;
+
+    width: 100%;
+
+    height: auto;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    background: var(--background);
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 0;
+
+    transition: max-height 0.4s ease;
+
+    border-bottom:
+      1px solid rgba(47, 52, 55, 0.08);
+  }
+
+
+  .nav-menu.open {
+    max-height: calc(100vh - 76px);
+
+    overflow-y: auto;
+  }
+
+
+  /* Items */
+
+  .nav-item {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+  }
+
+
+  .nav-link {
+    width: 100%;
+
+    min-height: 58px;
+
+    padding: 0 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    border-bottom:
+      1px solid rgba(47, 52, 55, 0.08);
+  }
+
+
+  .dropdown-toggle {
+    justify-content: space-between;
+  }
+
+
+  /* Dropdown mobile */
+
+  .dropdown-menu {
+    position: static;
+
+    min-width: auto;
+
+    padding: 0;
+
+    border: none;
+
+    box-shadow: none;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: none;
+
+    display: none;
+  }
+
+
+  .dropdown-menu.show {
+    display: block;
+  }
+
+
+  .dropdown-menu a {
+    padding: 16px 50px;
+
+    background:
+      rgba(113, 185, 190, 0.08);
+  }
+
+
+  /* CTA */
+
+  .cta-button {
+    margin: 24px 28px;
+
+    min-height: 52px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .navbar-container {
+    padding: 0 20px;
+  }
+
+
+  .logo-main,
+  .logo-secondary {
+    font-size: 23px;
+  }
+
+
+  .nav-link {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+  .dropdown-menu a {
+    padding-left: 40px;
+  }
+
+
+  .cta-button {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+}

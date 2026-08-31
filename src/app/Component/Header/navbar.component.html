@@ -1,1 +1,223 @@
-<p>navbar works!</p>
+<header class="navbar">
+
+  <div class="navbar-container">
+
+    <!-- =========================
+         LOGO
+    ========================== -->
+
+    <a
+      routerLink="/"
+      class="logo"
+      (click)="closeMenu()">
+
+      <span class="logo-main">
+        YOUR
+      </span>
+
+      <span class="logo-secondary">
+        CHURCH
+      </span>
+
+    </a>
+
+
+    <!-- =========================
+         HAMBURGER BUTTON
+    ========================== -->
+
+    <button
+      class="menu-button"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen"
+      aria-label="Open navigation menu">
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav
+      class="nav-menu"
+      [class.open]="menuOpen">
+
+
+      <!-- HOME -->
+
+      <a
+        routerLink="/"
+        class="nav-link"
+        (click)="closeMenu()">
+
+        HOME
+
+      </a>
+
+
+      <!-- ABOUT DROPDOWN -->
+
+      <div class="nav-item">
+
+        <button
+          class="nav-link dropdown-toggle"
+          (click)="toggleDropdown('about')">
+
+          ABOUT
+
+          <span
+            class="chevron"
+            [class.rotate]="activeDropdown === 'about'">
+
+            ↓
+
+          </span>
+
+        </button>
+
+
+        <div
+          class="dropdown-menu"
+          [class.show]="activeDropdown === 'about'">
+
+          <a
+            routerLink="/about"
+            (click)="closeMenu()">
+
+            Our Church
+
+          </a>
+
+          <a
+            routerLink="/team"
+            (click)="closeMenu()">
+
+            Our Team
+
+          </a>
+
+          <a
+            routerLink="/beliefs"
+            (click)="closeMenu()">
+
+            What We Believe
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- CONNECT DROPDOWN -->
+
+      <div class="nav-item">
+
+        <button
+          class="nav-link dropdown-toggle"
+          (click)="toggleDropdown('connect')">
+
+          CONNECT
+
+          <span
+            class="chevron"
+            [class.rotate]="activeDropdown === 'connect'">
+
+            ↓
+
+          </span>
+
+        </button>
+
+
+        <div
+          class="dropdown-menu"
+          [class.show]="activeDropdown === 'connect'">
+
+          <a
+            routerLink="/groups"
+            (click)="closeMenu()">
+
+            Groups
+
+          </a>
+
+          <a
+            routerLink="/students"
+            (click)="closeMenu()">
+
+            Students & Young Adults
+
+          </a>
+
+          <a
+            routerLink="/children"
+            (click)="closeMenu()">
+
+            Children
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- SERMONS -->
+
+      <a
+        routerLink="/sermons"
+        class="nav-link"
+        (click)="closeMenu()">
+
+        SERMONS
+
+      </a>
+
+
+      <!-- EVENTS -->
+
+      <a
+        routerLink="/events"
+        class="nav-link"
+        (click)="closeMenu()">
+
+        EVENTS
+
+      </a>
+
+
+      <!-- CONTACT -->
+
+      <a
+        routerLink="/contact"
+        class="nav-link"
+        (click)="closeMenu()">
+
+        CONTACT
+
+      </a>
+
+
+      <!-- CTA -->
+
+      <a
+        routerLink="/visit"
+        class="cta-button"
+        (click)="closeMenu()">
+
+        PLAN YOUR VISIT
+
+      </a>
+
+
+    </nav>
+
+  </div>
+
+</header>
