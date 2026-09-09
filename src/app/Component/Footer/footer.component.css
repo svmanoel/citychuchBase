@@ -1,0 +1,368 @@
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+  background: var(--text);
+  color: var(--background);
+  background-color: #2F3437;
+
+  position: relative;
+}
+
+
+/* =========================================
+   MAIN FOOTER
+========================================= */
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  padding: 70px 30px 55px;
+
+  display: grid;
+
+  grid-template-columns: 1.2fr 1fr 1fr;
+
+  gap: 45px;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.footer-brand {
+  max-width: 350px;
+}
+
+
+.footer-logo {
+
+  display: inline-flex;
+
+  flex-direction: column;
+
+  text-decoration: none;
+
+  line-height: 0.82;
+
+  margin-bottom: 25px;
+}
+
+
+.footer-logo span,
+.footer-logo strong {
+
+  font-family: var(--font-title);
+
+  font-size: 42px;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+}
+
+
+.footer-logo span {
+  color: var(--primary);
+}
+
+
+.footer-logo strong {
+  color: var(--background);
+}
+
+
+.footer-tagline {
+
+  font-family: var(--font-body);
+
+  font-size: 16px;
+
+  line-height: 1.7;
+
+  color: rgba(250, 248, 242, 0.75);
+
+  margin: 0 0 30px;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.footer-button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 15px 24px;
+
+  background: var(--accent);
+
+  color: var(--text);
+
+  text-decoration: none;
+
+  font-family: var(--font-subtitle);
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.footer-button:hover {
+
+  background: var(--primary);
+
+  color: white;
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================
+   COLUMNS
+========================================= */
+
+.footer-column h3 {
+
+  font-family: var(--font-subtitle);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin: 0;
+}
+
+
+.footer-line {
+
+  width: 45px;
+
+  height: 3px;
+
+  background: var(--accent);
+
+  margin: 15px 0 25px;
+}
+
+
+/* =========================================
+   ADDRESS
+========================================= */
+
+.footer-column address {
+
+  font-family: var(--font-body);
+
+  font-style: normal;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  color: rgba(250, 248, 242, 0.75);
+}
+
+
+.footer-column address p {
+  margin: 0;
+}
+
+
+/* =========================================
+   EMAIL
+========================================= */
+
+.footer-email {
+
+  display: inline-block;
+
+  margin-top: 15px;
+
+  color: var(--primary);
+
+  font-family: var(--font-body);
+
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+
+.footer-email:hover {
+
+  color: var(--accent);
+}
+
+
+/* =========================================
+   ELIM
+========================================= */
+
+.elim-logo {
+
+  width: 90px;
+
+  height: 90px;
+
+  object-fit: contain;
+
+  margin-bottom: 15px;
+
+  background: var(--background);
+
+  padding: 5px;
+}
+
+
+.affiliation p {
+
+  max-width: 330px;
+
+  font-family: var(--font-body);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  color: rgba(250, 248, 242, 0.75);
+
+  margin: 0;
+}
+
+
+.affiliation strong {
+
+  color: var(--background);
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   FOOTER BOTTOM
+========================================= */
+
+.footer-bottom {
+
+  border-top:
+    1px solid rgba(250, 248, 242, 0.12);
+}
+
+
+.footer-bottom-container {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  padding: 18px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+.footer-bottom p {
+
+  margin: 0;
+
+  font-family: var(--font-body);
+
+  font-size: 12px;
+
+  color: rgba(250, 248, 242, 0.5);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .footer-container {
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 60px;
+
+    padding:
+      70px 30px 55px;
+  }
+
+
+  .footer-brand {
+
+    grid-column: 1 / -1;
+
+    max-width: 500px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .footer-container {
+
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    padding:
+      65px 25px 50px;
+  }
+
+
+  .footer-brand {
+
+    grid-column: auto;
+  }
+
+
+  .footer-logo span,
+.footer-logo strong {
+  font-family: var(--font-title);
+
+  font-size: 34px;
+  font-weight: 800;
+
+  letter-spacing: -1px;
+}
+
+
+  .footer-bottom-container {
+
+    padding:
+      20px 25px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+  }
+
+}

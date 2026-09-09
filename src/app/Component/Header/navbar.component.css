@@ -6,6 +6,7 @@
   width: 100%;
   background: var(--background);
   border-bottom: 1px solid rgba(47, 52, 55, 0.08);
+  background-color: #71B9BE;
 
   position: sticky;
   top: 0;
