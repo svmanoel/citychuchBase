@@ -101,7 +101,9 @@
 }
 
 
-/* Links */
+/* =========================================
+   NAV LINKS
+========================================= */
 
 .nav-link {
   font-family: var(--font-subtitle);
@@ -111,11 +113,11 @@
 
   letter-spacing: 0.8px;
 
-  color: var(--text);
+  color: #2F3437;
 
   text-decoration: none;
 
-  background: none;
+  background: transparent;
   border: none;
 
   cursor: pointer;
@@ -126,8 +128,25 @@
 }
 
 
+/* Hover */
+
 .nav-link:hover {
-  color: var(--primary);
+   color:VAR(--background);
+}
+
+
+/* Focus */
+
+.nav-link:focus {
+  color:VAR(--background);
+  outline: none;
+}
+
+
+/* Active */
+
+.nav-link:active {
+  color:VAR(--background);
 }
 
 
@@ -221,7 +240,7 @@
 .dropdown-menu a:hover {
   background: rgba(113, 185, 190, 0.12);
 
-  color: var(--primary);
+  color: #FFFFFF;
 }
 
 

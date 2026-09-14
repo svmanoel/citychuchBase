@@ -1,168 +1,115 @@
-<!-- =========================================
-     HERO VIDEO
-========================================= -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-<section class="intro-video">
-
-  <!-- Video Background -->
-  <video
-    class="hero-video"
-    autoplay
-    muted
-    loop
-    playsinline>
-
-    <source
-      src="assets/videos/citichurch.mp4"
-      type="video/mp4">
-
+<section class="container-fluid p-0 position-relative">
+  <!-- VIDEO -->
+  <video     class="w-100 video-home d-block"    autoplay    [muted]="true"    loop    playsinline    preload="auto">
+    <source      src="assets/videos/citichurch.mp4"      type="video/mp4">
   </video>
 
+  <!-- OVERLAY -->
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50">  </div>
 
-  <!-- Overlay -->
-  <div class="hero-overlay"></div>
-
-
-  <!-- Content -->
-
-  <div class="hero-content">
-
-    <p class="hero-kicker">
-      WELCOME HOME
-    </p>
-
-
-    <h1>
-      Welcome to
-      <span>City Church Liverpool</span>
-    </h1>
-
-
-    <p class="hero-description">
-
-      Transformed by Jesus' love
-      for community and mission.
-
-    </p>
-
-
-    <a
-      href="#visit"
-      class="hero-button">
-
-      PLAN YOUR VISIT
-
-    </a>
-
+  <!-- CONTENT -->
+  <div class="position-absolute top-50 start-50 translate-middle w-100">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-9 text-center text-white">
+          <p class="fw-bold mb-2">WELCOME HOME</p>
+          <h1 class="display-4 fw-bold mb-3">Welcome to<span class="d-block">City Church Liverpool</span></h1>
+          <p class="lead mb-4">Transformed by Jesus' lovefor community and mission.</p>
+          <a href="#visit" class="btn btn-warning px-4 py-3 fw-bold"> PLAN YOUR VISIT</a>
+        </div>
+      </div>
+    </div>
   </div>
-
 </section>
 
-<!-- =========================================
-     INTRODUCTION
-========================================= -->
 
-<section class="intro-section">
+<!-- =====================================================
+     WHO WE ARE
+===================================================== -->
 
-  <div class="section-container intro-grid">
+<section class="container-fluid py-5">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <!-- TEXT -->
+      <div class="col-12 col-lg-6">
+        <p class="fw-bold mb-2">WHO WE ARE</p>
+        <h2 class="display-5 fw-bold mb-4">
+          A church family
+          <span class="d-block">
+            for everyone.
+          </span>
+        </h2>
+        <p class="lead">
+          We're a warm, welcoming church family in the
+          heart of Liverpool, made up of people of all
+          ages, backgrounds and nationalities.
+        </p>
+        <p>
+          Whether you've followed Jesus for years,
+          you're exploring faith for the first time,
+          or you're simply looking for somewhere to belong,
+          you're welcome here.
+        </p>
+      </div>
 
-    <div class="intro-text">
-
-      <p class="section-kicker">
-        WHO WE ARE
-      </p>
-
-
-      <h2>
-        A church family
-        <span>for everyone.</span>
-      </h2>
-
-
-      <p>
-
-        We're a warm, welcoming church family in the
-        heart of Liverpool, made up of people of all
-        ages, backgrounds and nationalities.
-
-      </p>
-
-
-      <p>
-
-        Whether you've followed Jesus for years,
-        you're exploring faith for the first time,
-        or you're simply looking for somewhere to belong,
-        you're welcome here.
-
-      </p>
-
+      <!-- IMAGE -->
+      <div class="col-12 col-lg-6">
+        <img
+          src="assets/images/CityChurchFamily.jpg"
+          class="img-fluid w-50 rounded"
+          alt="City Church Liverpool community">
+      </div>
     </div>
-
-
-    <!-- IMAGE -->
-
-    <div class="intro-image">
-
-      <img
-        src="assets/images/church-community.jpg"
-        alt="City Church Liverpool community">
-
-    </div>
-
   </div>
-
 </section>
 
-<section class="community-section">
 
-  <div class="section-container community-grid">
+<!-- =====================================================
+     COMMUNITY
+===================================================== -->
 
-    <div class="community-image">
+<section class="container-fluid bg-light py-5">
+  <div class="container">
+    <div class="row align-items-center g-4">
 
-      <img
-        src="assets/images/church-worship.jpg"
-        alt="People worshipping">
+      <!-- IMAGE -->
+      <div class="col-12 col-lg-6 order-2 order-lg-1">
+        <img
+          src="assets/images/CityChurchFamily.jpg" class="img-fluid w-50 rounded" alt="People worshipping at City Church Liverpool">
+      </div>
 
-    </div>
+      <!-- TEXT -->
+      <div class="col-12 col-lg-6 order-1 order-lg-2">
+        <p class="fw-bold mb-2">
+          COMMUNITY
+        </p>
+        <h2 class="display-5 fw-bold mb-4">
+          Growing together
+          <span class="d-block">
+            in faith.
+          </span>
+        </h2>
+        <p class="lead">
+          We believe the love of Jesus changes lives.
+        </p>
+        <p>
+          As we follow Him together, we're growing in faith,
+          building authentic community and sharing His love
+          with the people around us.
+        </p>
+        <a
+          routerLink="/groups"
+          class="btn btn-outline-dark mt-3">
 
+          DISCOVER OUR COMMUNITY →
 
-    <div class="community-text">
+        </a>
 
-      <p class="section-kicker">
-        COMMUNITY
-      </p>
-
-
-      <h2>
-        Growing together
-        <span>in faith.</span>
-      </h2>
-
-
-      <p>
-
-        We believe the love of Jesus changes lives.
-
-      </p>
-
-
-      <p>
-
-        As we follow Him together, we're growing in faith,
-        building authentic community and sharing His love
-        with the people around us.
-
-      </p>
-
-
-      <a
-        routerLink="/groups"
-        class="text-button">
-
-        DISCOVER OUR COMMUNITY →
-
-      </a>
+      </div>
 
     </div>
 
@@ -170,64 +117,64 @@
 
 </section>
 
-<!-- =========================================
+
+<!-- =====================================================
      VISIT US
-========================================= -->
+===================================================== -->
 
 <section
   id="visit"
-  class="visit-section">
+  class="container-fluid bg-dark text-white py-5">
 
+  <div class="container">
 
-  <div class="visit-content">
+    <div class="row justify-content-center">
 
-    <p>
-      YOU'RE INVITED
-    </p>
+      <div class="col-12 col-lg-8 text-center">
 
+        <p class="fw-bold mb-2">
+          YOU'RE INVITED
+        </p>
 
-    <h2>
-      Join us this
-      <span>Sunday.</span>
-    </h2>
+        <h2 class="display-4 fw-bold mb-4">
+          Join us this
+          <span>Sunday.</span>
+        </h2>
 
+        <!-- SERVICE TIME -->
+        <div class="mb-4">
 
-    <div class="service-time">
+          <strong class="d-block">
+            EVERY SUNDAY
+          </strong>
 
-      <strong>
-        EVERY SUNDAY
-      </strong>
+          <span class="display-6 fw-bold">
+            11:00 AM
+          </span>
 
-      <span>
-        11:00 AM
-      </span>
+        </div>
+
+        <p class="lead mb-4">
+          Join us for contemporary worship,
+          practical Bible teaching, prayer
+          and great community.
+        </p>
+
+        <a
+          routerLink="/visit"
+          class="btn btn-warning px-4 py-3 fw-bold">
+
+          PLAN YOUR VISIT
+
+        </a>
+
+        <p class="mt-4 mb-0">
+          We'd love to meet you ❤️
+        </p>
+
+      </div>
 
     </div>
-
-
-    <p class="visit-description">
-
-      Join us for contemporary worship,
-      practical Bible teaching, prayer
-      and great community.
-
-    </p>
-
-
-    <a
-      routerLink="/visit"
-      class="visit-button">
-
-      PLAN YOUR VISIT
-
-    </a>
-
-
-    <p class="meet-you">
-
-      We'd love to meet you ❤️
-
-    </p>
 
   </div>
 
