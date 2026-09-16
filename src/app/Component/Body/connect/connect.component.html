@@ -1,0 +1,647 @@
+<!-- =========================================
+     CONNECT
+========================================= -->
+
+<section class="container-fluid py-5">
+
+  <div class="container">
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <div class="row justify-content-center text-center mb-5">
+
+      <div class="col-12 col-lg-9">
+
+        <p class="fw-bold mb-2">
+          CONNECT
+        </p>
+
+        <h1 class="display-3 fw-bold mb-4">
+          Find your place.
+        </h1>
+
+        <p class="lead">
+          There are lots of ways to connect, grow and get involved
+          at City Church Liverpool.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================
+         HOME GROUPS
+    ====================================== -->
+
+    <div class="row align-items-center g-4 mb-5">
+
+      <div class="col-12 col-lg-6">
+
+        <p class="fw-bold mb-2">
+          HOME GROUPS
+        </p>
+
+        <h2 class="display-5 fw-bold mb-3">
+          Growing together.
+        </h2>
+
+        <p>
+          Our Home Groups are a great way to build friendships,
+          explore the Bible and pray together.
+        </p>
+
+        <button
+          type="button"
+          class="btn btn-outline-dark"
+          (click)="toggleSection('groups')">
+
+          {{ activeSection === 'groups' ? 'SHOW LESS' : 'LEARN MORE' }}
+
+        </button>
+
+      </div>
+
+
+      <div class="col-12 col-lg-6">
+
+        <img
+          src="assets/images/church-community.jpg"
+          class="img-fluid w-100 rounded"
+          alt="City Church Liverpool community">
+
+      </div>
+
+
+      <!-- FULL CONTENT -->
+
+      <div
+        class="col-12"
+        *ngIf="activeSection === 'groups'">
+
+        <div class="bg-light rounded p-4 p-lg-5">
+
+          <h3 class="fw-bold mb-3">
+            Home Groups
+          </h3>
+
+          <p>
+            Home Groups meet every other week across Liverpool.
+            They are a place where we can build genuine friendships,
+            explore the Bible together, pray and encourage one another.
+          </p>
+
+          <p>
+            Whether you've been part of church for years or you're
+            just starting to explore faith, Home Groups are a place
+            where you can ask questions, grow and do life together.
+          </p>
+
+          <div class="row g-4 mt-2">
+
+            <div class="col-12 col-md-4">
+
+              <h4 class="h5 fw-bold">
+                Friendly conversation
+              </h4>
+
+              <p>
+                Get to know others and build genuine friendships.
+              </p>
+
+            </div>
+
+
+            <div class="col-12 col-md-4">
+
+              <h4 class="h5 fw-bold">
+                Bible discussion
+              </h4>
+
+              <p>
+                Explore the Bible together and discover what it means
+                for everyday life.
+              </p>
+
+            </div>
+
+
+            <div class="col-12 col-md-4">
+
+              <h4 class="h5 fw-bold">
+                Prayer
+              </h4>
+
+              <p>
+                Pray together, encourage one another and grow in faith.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="mt-4">
+
+            <a
+              routerLink="/contact"
+              class="btn btn-dark">
+
+              FIND YOUR PLACE
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================
+         ALPHA
+    ====================================== -->
+
+    <div class="row align-items-center g-4 mb-5">
+
+      <div class="col-12 col-lg-6 order-lg-2">
+
+        <p class="fw-bold mb-2">
+          ALPHA
+        </p>
+
+        <h2 class="display-5 fw-bold mb-3">
+          Explore faith.
+        </h2>
+
+        <p>
+          Alpha is a relaxed and welcoming space where you can
+          explore the Christian faith, ask honest questions and
+          have conversations without pressure.
+        </p>
+
+        <button
+          type="button"
+          class="btn btn-outline-dark"
+          (click)="toggleSection('alpha')">
+
+          {{ activeSection === 'alpha' ? 'SHOW LESS' : 'LEARN MORE' }}
+
+        </button>
+
+      </div>
+
+
+      <div class="col-12 col-lg-6 order-lg-1">
+
+        <img
+          src="assets/images/church-worship.jpg"
+          class="img-fluid w-100 rounded"
+          alt="City Church Liverpool worship">
+
+      </div>
+
+
+      <!-- FULL CONTENT -->
+
+      <div
+        class="col-12 order-lg-3"
+        *ngIf="activeSection === 'alpha'">
+
+        <div class="bg-light rounded p-4 p-lg-5">
+
+          <h3 class="fw-bold mb-3">
+            Alpha
+          </h3>
+
+          <p>
+            Alpha provides a relaxed and welcoming space to explore
+            Christian faith, ask honest questions and discover more
+            about Jesus.
+          </p>
+
+          <p>
+            Each gathering includes time to connect with others,
+            a short talk and an opportunity for open conversation.
+          </p>
+
+          <p class="mb-0">
+            You don't need any previous knowledge of the Bible or
+            Christian faith. Come along, meet people and ask whatever
+            questions you have.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================
+         CHILDREN & YOUNG PEOPLE
+    ====================================== -->
+
+    <div class="row align-items-center g-4 mb-5">
+
+      <div class="col-12 col-lg-6">
+
+        <p class="fw-bold mb-2">
+          CHILDREN & YOUNG PEOPLE
+        </p>
+
+        <h2 class="display-5 fw-bold mb-3">
+          A place for every generation.
+        </h2>
+
+        <p>
+          We want children and young people to experience a safe,
+          welcoming and engaging environment where they can learn
+          about Jesus and grow in faith.
+        </p>
+
+        <button
+          type="button"
+          class="btn btn-outline-dark"
+          (click)="toggleSection('children')">
+
+          {{ activeSection === 'children' ? 'SHOW LESS' : 'LEARN MORE' }}
+
+        </button>
+
+      </div>
+
+
+      <div class="col-12 col-lg-6">
+
+        <img
+          src="assets/images/church-community.jpg"
+          class="img-fluid w-100 rounded"
+          alt="City Church Liverpool community">
+
+      </div>
+
+
+      <!-- FULL CONTENT -->
+
+      <div
+        class="col-12"
+        *ngIf="activeSection === 'children'">
+
+        <div class="bg-light rounded p-4 p-lg-5">
+
+          <h3 class="fw-bold mb-4">
+            Children & Young People
+          </h3>
+
+
+          <div class="row g-4">
+
+            <!-- CRECHE -->
+
+            <div class="col-12 col-md-4">
+
+              <h4 class="h5 fw-bold">
+                Creche
+              </h4>
+
+              <p>
+                For children aged 0–4, providing a safe and welcoming
+                environment for our youngest children.
+              </p>
+
+            </div>
+
+
+            <!-- CHILDREN -->
+
+            <div class="col-12 col-md-4">
+
+              <h4 class="h5 fw-bold">
+                Children
+              </h4>
+
+              <p>
+                For children aged 5–10, with engaging environments
+                designed to help them learn and grow.
+              </p>
+
+            </div>
+
+
+            <!-- YOUTH -->
+
+            <div class="col-12 col-md-4">
+
+              <h4 class="h5 fw-bold">
+                Youth
+              </h4>
+
+              <p>
+                For young people aged 11–16, creating space to explore
+                faith, build friendships and grow together.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="mt-4">
+
+            <p class="mb-0">
+              Our volunteers are safely recruited, DBS checked and
+              trained to help create safe and welcoming environments
+              for children and young people.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================
+         YOUNG ADULTS
+    ====================================== -->
+
+    <div class="row align-items-center g-4 mb-5">
+
+      <div class="col-12 col-lg-6 order-lg-2">
+
+        <p class="fw-bold mb-2">
+          YOUNG ADULTS
+        </p>
+
+        <h2 class="display-5 fw-bold mb-3">
+          Life, faith and what's next.
+        </h2>
+
+        <p>
+          A place for young adults to build friendships, grow in
+          Jesus and navigate university, careers and what's next.
+        </p>
+
+        <button
+          type="button"
+          class="btn btn-outline-dark"
+          (click)="toggleSection('young-adults')">
+
+          {{ activeSection === 'young-adults' ? 'SHOW LESS' : 'LEARN MORE' }}
+
+        </button>
+
+      </div>
+
+
+      <div class="col-12 col-lg-6 order-lg-1">
+
+        <img
+          src="assets/images/church-community.jpg"
+          class="img-fluid w-100 rounded"
+          alt="Young adults at City Church Liverpool">
+
+      </div>
+
+
+      <!-- FULL CONTENT -->
+
+      <div
+        class="col-12 order-lg-3"
+        *ngIf="activeSection === 'young-adults'">
+
+        <div class="bg-light rounded p-4 p-lg-5">
+
+          <h3 class="fw-bold mb-3">
+            Young Adults
+          </h3>
+
+          <p>
+            Our Young Adults community is for people aged 16–26,
+            whether you're at university, starting a career or
+            figuring out what's next.
+          </p>
+
+          <p>
+            We meet regularly to build friendships, grow in our
+            relationship with Jesus and spend time together.
+          </p>
+
+          <p class="mb-0">
+            Alongside our regular gatherings, there are opportunities
+            for socials and spending time together outside of church.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================
+         SERVING
+    ====================================== -->
+
+    <div class="row align-items-center g-4 mb-5">
+
+      <div class="col-12 col-lg-6">
+
+        <p class="fw-bold mb-2">
+          SERVING
+        </p>
+
+        <h2 class="display-5 fw-bold mb-3">
+          Everyone has a part to play.
+        </h2>
+
+        <p>
+          We believe everyone has something to contribute. Serving
+          is a great way to discover your gifts, meet people and
+          find your place in the church family.
+        </p>
+
+        <button
+          type="button"
+          class="btn btn-outline-dark"
+          (click)="toggleSection('serving')">
+
+          {{ activeSection === 'serving' ? 'SHOW LESS' : 'LEARN MORE' }}
+
+        </button>
+
+      </div>
+
+
+      <div class="col-12 col-lg-6">
+
+        <img
+          src="assets/images/church-community.jpg"
+          class="img-fluid w-100 rounded"
+          alt="Serving at City Church Liverpool">
+
+      </div>
+
+
+      <!-- FULL CONTENT -->
+
+      <div
+        class="col-12"
+        *ngIf="activeSection === 'serving'">
+
+        <div class="bg-light rounded p-4 p-lg-5">
+
+          <h3 class="fw-bold mb-3">
+            Serving at City Church
+          </h3>
+
+          <p>
+            There are lots of different ways to get involved in
+            church life. Whether you enjoy welcoming people, helping
+            with children, serving with worship or supporting the
+            practical needs of church, there is a place for you.
+          </p>
+
+          <p class="mb-0">
+            Serving isn't simply about filling a role. It's about
+            using what God has given us to bless others and play our
+            part in the life of the church.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================
+         MISSION
+    ====================================== -->
+
+    <div class="row align-items-center g-4 mb-5">
+
+      <div class="col-12 col-lg-6 order-lg-2">
+
+        <p class="fw-bold mb-2">
+          MISSION
+        </p>
+
+        <h2 class="display-5 fw-bold mb-3">
+          Living on mission.
+        </h2>
+
+        <p>
+          We want to share God's love through everyday life,
+          both in Liverpool and beyond.
+        </p>
+
+        <button
+          type="button"
+          class="btn btn-outline-dark"
+          (click)="toggleSection('mission')">
+
+          {{ activeSection === 'mission' ? 'SHOW LESS' : 'LEARN MORE' }}
+
+        </button>
+
+      </div>
+
+
+      <div class="col-12 col-lg-6 order-lg-1">
+
+        <img
+          src="assets/images/church-community.jpg"
+          class="img-fluid w-100 rounded"
+          alt="City Church Liverpool mission">
+
+      </div>
+
+
+      <!-- FULL CONTENT -->
+
+      <div
+        class="col-12 order-lg-3"
+        *ngIf="activeSection === 'mission'">
+
+        <div class="bg-light rounded p-4 p-lg-5">
+
+          <h3 class="fw-bold mb-3">
+            Living on Mission
+          </h3>
+
+          <p>
+            Mission is part of who we are. We want to live out
+            Jesus' love through everyday life and share His hope
+            with the people around us.
+          </p>
+
+          <p>
+            This includes our local community in Liverpool as well
+            as opportunities to support mission beyond our city.
+          </p>
+
+          <p class="mb-0">
+            We believe that mission isn't only something that happens
+            in a church building. It is something we live every day,
+            wherever God has placed us.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     CALL TO ACTION
+========================================= -->
+
+<section class="container-fluid py-5 bg-light">
+
+  <div class="container">
+
+    <div class="row justify-content-center text-center">
+
+      <div class="col-12 col-lg-8">
+
+        <p class="fw-bold mb-2">
+          YOU'RE WELCOME
+        </p>
+
+        <h2 class="display-5 fw-bold mb-4">
+          Find your place at City Church.
+        </h2>
+
+        <p class="lead mb-4">
+          We'd love to connect with you and help you find
+          the right place to get involved.
+        </p>
+
+        <a
+          routerLink="/visit"
+          class="btn btn-dark">
+
+          PLAN YOUR VISIT
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

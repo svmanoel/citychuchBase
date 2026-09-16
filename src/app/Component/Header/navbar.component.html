@@ -39,88 +39,20 @@
       class="nav-menu"
       [class.open]="menuOpen">
 
-
       <!-- HOME -->
-      <a routerLink="/" class="nav-link" (click)="closeMenu()">HOME</a>
-
-
-
-
-      <!-- CONNECT DROPDOWN -->
-
-      <div class="nav-item">
-
-        <button
-          class="nav-link dropdown-toggle"
-          (click)="toggleDropdown('connect')">
-
-          CONNECT
-
-          <span
-            class="chevron"
-            [class.rotate]="activeDropdown === 'connect'">
-
-            ↓
-
-          </span>
-
-        </button>
-
-
-        <div
-          class="dropdown-menu"
-          [class.show]="activeDropdown === 'connect'">
-
-          <a
-            routerLink="/groups"
-            (click)="closeMenu()">
-
-            Groups
-
-          </a>
-
-          <a
-            routerLink="/students"
-            (click)="closeMenu()">
-
-            Students & Young Adults
-
-          </a>
-
-          <a
-            routerLink="/children"
-            (click)="closeMenu()">
-
-            Children
-
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- SERMONS -->
-
-      <a
-        routerLink="/sermons"
-        class="nav-link"
-        (click)="closeMenu()">
-
-        SERMONS
-
+      <a routerLink="/" class="nav-link" (click)="closeMenu()">
+        HOME
       </a>
 
+      <!-- CONNECT  -->
 
-      <!-- EVENTS -->
+      <a  routerLink="/connect"  class="nav-link"  (click)="closeMenu()">  
+        CONNECT
+      </a>
 
-      <a
-        routerLink="/events"
-        class="nav-link"
-        (click)="closeMenu()">
-
-        EVENTS
-
+      <!-- SERMONS -->
+      <a  routerLink="/services"  class="nav-link"  (click)="closeMenu()">
+        SERVICES
       </a>
 
 

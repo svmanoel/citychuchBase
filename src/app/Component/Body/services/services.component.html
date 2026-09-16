@@ -1,0 +1,471 @@
+<!-- =========================================
+     SERVICES
+========================================= -->
+
+<section class="container-fluid py-5">
+
+  <div class="container">
+
+    <!-- =====================================
+         PAGE HEADER
+    ====================================== -->
+
+    <div class="row justify-content-center text-center mb-5">
+
+      <div class="col-12 col-lg-9">
+
+        <p class="fw-bold mb-2">
+          SERVICES
+        </p>
+
+        <h1 class="display-3 fw-bold mb-4">
+          Gather, worship and pray.
+        </h1>
+
+        <p class="lead">
+          Join us as we gather together, worship Jesus,
+          learn from the Bible and seek God in prayer.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================
+         SUNDAYS
+    ====================================== -->
+
+    <div class="row align-items-center g-4 mb-5">
+
+      <!-- TEXT -->
+
+      <div class="col-12 col-lg-6">
+
+        <p class="fw-bold mb-2">
+          SUNDAYS
+        </p>
+
+        <h2 class="display-5 fw-bold mb-3">
+          Join us this Sunday.
+        </h2>
+
+        <p>
+          Every Sunday at 11:00am, we gather to worship God,
+          learn from the Bible, pray together and enjoy being
+          church family.
+        </p>
+
+        <p>
+          Whether you're visiting for the first time or you've
+          been coming for years, you'll find a warm welcome
+          and a relaxed atmosphere.
+        </p>
+
+        <button
+          type="button"
+          class="btn btn-outline-dark"
+          (click)="toggleSection('sundays')">
+
+          {{ activeSection === 'sundays'
+              ? 'SHOW LESS'
+              : 'LEARN MORE' }}
+
+        </button>
+
+      </div>
+
+
+      <!-- IMAGE -->
+
+      <div class="col-12 col-lg-6">
+
+        <img
+          src="assets/images/church-worship.jpg"
+          class="img-fluid w-100 rounded"
+          alt="Sunday worship at City Church Liverpool">
+
+      </div>
+
+
+      <!-- =====================================
+           FULL SUNDAYS CONTENT
+      ====================================== -->
+
+      <div
+        class="col-12"
+        *ngIf="activeSection === 'sundays'">
+
+        <div class="bg-light rounded p-4 p-lg-5">
+
+          <h3 class="fw-bold mb-4">
+            What to Expect
+          </h3>
+
+          <p>
+            Every Sunday at 11:00am, we gather to worship God,
+            learn from the Bible, pray together and enjoy being
+            church family.
+          </p>
+
+          <div class="row g-4 mt-2">
+
+            <!-- WORSHIP -->
+
+            <div class="col-12 col-md-6">
+
+              <h4 class="h5 fw-bold">
+                Contemporary Worship
+              </h4>
+
+              <p>
+                Our worship is contemporary, heartfelt and
+                focused on God. We believe worship is more than
+                singing—it’s responding to who God is and what
+                He has done.
+              </p>
+
+            </div>
+
+
+            <!-- TEACHING -->
+
+            <div class="col-12 col-md-6">
+
+              <h4 class="h5 fw-bold">
+                Bible Teaching
+              </h4>
+
+              <p>
+                Each week we teach from the Bible in a way that
+                is practical, relevant and rooted in Scripture,
+                helping us grow as followers of Jesus in
+                everyday life.
+              </p>
+
+            </div>
+
+
+            <!-- PRAYER -->
+
+            <div class="col-12 col-md-6">
+
+              <h4 class="h5 fw-bold">
+                Prayer & Reflection
+              </h4>
+
+              <p>
+                There are opportunities throughout the service
+                for prayer and reflection as we respond to God
+                and seek His presence.
+              </p>
+
+            </div>
+
+
+            <!-- CHILDREN -->
+
+            <div class="col-12 col-md-6">
+
+              <h4 class="h5 fw-bold">
+                Children & Young People
+              </h4>
+
+              <p>
+                We provide a safe and engaging programme for
+                children and young people during the service.
+              </p>
+
+            </div>
+
+
+            <!-- COMMUNITY -->
+
+            <div class="col-12 col-md-6">
+
+              <h4 class="h5 fw-bold">
+                Tea & Coffee
+              </h4>
+
+              <p>
+                After the service there is plenty of time to
+                chat, enjoy a tea or coffee and get to know
+                one another.
+              </p>
+
+            </div>
+
+
+            <!-- NEW HERE -->
+
+            <div class="col-12 col-md-6">
+
+              <h4 class="h5 fw-bold">
+                New Here?
+              </h4>
+
+              <p>
+                There’s no dress code, no pressure and no
+                expectation that you’ll know what to do.
+                Come as you are and join in as much or as
+                little as you feel comfortable.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- SUNDAY TIME -->
+
+          <div class="mt-4 p-4 bg-white rounded">
+
+            <h4 class="h5 fw-bold mb-2">
+              Every Sunday
+            </h4>
+
+            <p class="mb-0">
+              <strong>11:00am</strong>
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================
+         PRAYER
+    ====================================== -->
+
+    <div class="row align-items-center g-4 mb-5">
+
+      <!-- TEXT -->
+
+      <div class="col-12 col-lg-6 order-lg-2">
+
+        <p class="fw-bold mb-2">
+          PRAYER
+        </p>
+
+        <h2 class="display-5 fw-bold mb-3">
+          Prayer is at the heart of City Church.
+        </h2>
+
+        <p>
+          We believe God hears prayer, speaks today and
+          continues to transform lives.
+        </p>
+
+        <p>
+          Alongside praying in every Sunday service, we gather
+          regularly throughout the month to seek God together.
+        </p>
+
+        <button
+          type="button"
+          class="btn btn-outline-dark"
+          (click)="toggleSection('prayer')">
+
+          {{ activeSection === 'prayer'
+              ? 'SHOW LESS'
+              : 'LEARN MORE' }}
+
+        </button>
+
+      </div>
+
+
+      <!-- IMAGE -->
+
+      <div class="col-12 col-lg-6 order-lg-1">
+
+        <img
+          src="assets/images/church-community.jpg"
+          class="img-fluid w-100 rounded"
+          alt="Prayer at City Church Liverpool">
+
+      </div>
+
+
+      <!-- =====================================
+           FULL PRAYER CONTENT
+      ====================================== -->
+
+      <div
+        class="col-12 order-lg-3"
+        *ngIf="activeSection === 'prayer'">
+
+        <div class="bg-light rounded p-4 p-lg-5">
+
+          <h3 class="fw-bold mb-4">
+            Ways We Pray Together
+          </h3>
+
+
+          <!-- =================================
+               I SEE A CLOUD
+          ================================== -->
+
+          <div class="mb-4">
+
+            <h4 class="h4 fw-bold">
+              I See a Cloud Prayer
+            </h4>
+
+            <p class="fw-bold mb-2">
+              Every other Tuesday | 7:00–8:00am
+            </p>
+
+            <p>
+              A focused hour of prayer as we seek God for our
+              church, our city and all that He wants to do in
+              the weeks ahead.
+            </p>
+
+            <p class="mb-0">
+              We gather with faith, believing God is always at
+              work, even when we can’t yet see it.
+            </p>
+
+          </div>
+
+
+          <hr>
+
+
+          <!-- =================================
+               BOILER ROOM
+          ================================== -->
+
+          <div class="my-4">
+
+            <h4 class="h4 fw-bold">
+              Boiler Room Prayer
+            </h4>
+
+            <p class="fw-bold mb-2">
+              Every Sunday | 10:00–10:30am
+            </p>
+
+            <p>
+              Before every Sunday service we meet to pray for
+              everyone who will be attending, everyone serving,
+              and all that God wants to do that morning.
+            </p>
+
+            <p class="mb-0">
+              Everyone is welcome.
+            </p>
+
+          </div>
+
+
+          <hr>
+
+
+          <!-- =================================
+               PRAYER & FASTING
+          ================================== -->
+
+          <div class="my-4">
+
+            <h4 class="h4 fw-bold">
+              Prayer & Fasting
+            </h4>
+
+            <p class="fw-bold mb-2">
+              Once each month
+            </p>
+
+            <p>
+              Once a month we set aside a day to go deeper in
+              seeking God through prayer and fasting.
+            </p>
+
+            <p>
+              Together we worship, pray, listen and make space
+              for God to renew our hearts, strengthen our faith
+              and guide us as a church.
+            </p>
+
+            <p class="mb-0">
+              Whether you’ve been praying for years or you’re
+              just beginning, we’d love you to join us as we
+              seek God together.
+            </p>
+
+          </div>
+
+
+          <!-- =================================
+               BIBLE VERSE
+          ================================== -->
+
+          <div class="mt-4 p-4 bg-white rounded text-center">
+
+            <p class="fst-italic mb-2">
+              “The earnest prayer of a righteous person has
+              great power and produces wonderful results.”
+            </p>
+
+            <p class="fw-bold mb-0">
+              James 5:16
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     CALL TO ACTION
+========================================= -->
+
+<section class="container-fluid bg-light py-5">
+
+  <div class="container">
+
+    <div class="row justify-content-center text-center">
+
+      <div class="col-12 col-lg-8">
+
+        <p class="fw-bold mb-2">
+          YOU'RE WELCOME
+        </p>
+
+        <h2 class="display-5 fw-bold mb-4">
+          We'd love to see you.
+        </h2>
+
+        <p class="lead mb-4">
+          Come as you are and join us this Sunday.
+        </p>
+
+        <a
+          routerLink="/visit"
+          class="btn btn-dark">
+
+          PLAN YOUR VISIT
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

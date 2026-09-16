@@ -131,14 +131,14 @@
 /* Hover */
 
 .nav-link:hover {
-   color:VAR(--background);
+   color:VAR( --accent);
 }
 
 
 /* Focus */
 
 .nav-link:focus {
-  color:VAR(--background);
+  color:VAR( --accent);
   outline: none;
 }
 
@@ -146,7 +146,7 @@
 /* Active */
 
 .nav-link:active {
-  color:VAR(--background);
+  color:VAR( --accent);
 }
 
 
@@ -240,7 +240,7 @@
 .dropdown-menu a:hover {
   background: rgba(113, 185, 190, 0.12);
 
-  color: #FFFFFF;
+  color:  var(--accent);
 }
 
 
