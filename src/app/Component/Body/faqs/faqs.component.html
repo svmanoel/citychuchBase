@@ -1,0 +1,139 @@
+<!-- =========================================
+     FREQUENTLY ASKED QUESTIONS
+========================================= -->
+
+<section class="py-5">
+
+  <div class="container py-4">
+
+    <!-- Section heading -->
+    <div class="row justify-content-center mb-4">
+
+      <div class="col-12 col-lg-8 text-center">
+
+        <span class="section-label">
+          QUESTIONS
+        </span>
+
+        <h2 class="display-5 fw-bold mb-3">
+          Frequently Asked Questions
+        </h2>
+
+        <p class="mb-0">
+          If you're new to church or simply want to know more,
+          here are some answers to questions we are often asked.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- FAQ search -->
+    <div class="row justify-content-center mb-5">
+
+      <div class="col-12 col-lg-8">
+
+        <div class="input-group">
+
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            placeholder="Search frequently asked questions..."
+            [(ngModel)]="faqSearch"
+          >
+
+          <button
+            *ngIf="faqSearch"
+            type="button"
+            class="btn btn-outline-secondary"
+            (click)="clearFaqSearch()"
+          >
+            Clear
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- FAQ list -->
+    <div class="row justify-content-center">
+
+      <div class="col-12 col-lg-9">
+
+        <div
+          class="accordion"
+          id="faqsAccordion"
+        >
+
+          <!-- FAQ item -->
+          <div
+            class="accordion-item"
+            *ngFor="let faq of filteredFaqs; let i = index"
+          >
+
+            <h2
+              class="accordion-header"
+              [id]="'faqHeading' + faq.id"
+            >
+
+              <button
+                class="accordion-button"
+                [class.collapsed]="i !== 0"
+                type="button"
+                data-bs-toggle="collapse"
+                [attr.data-bs-target]="'#faq' + faq.id"
+                [attr.aria-expanded]="i === 0"
+                [attr.aria-controls]="'faq' + faq.id"
+              >
+                {{ faq.question }}
+              </button>
+
+            </h2>
+
+
+            <div
+              [id]="'faq' + faq.id"
+              class="accordion-collapse collapse"
+              [class.show]="i === 0"
+              [attr.aria-labelledby]="'faqHeading' + faq.id"
+              data-bs-parent="#faqsAccordion"
+            >
+
+              <div class="accordion-body">
+                {{ faq.answer }}
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- No results -->
+          <div
+            *ngIf="filteredFaqs.length === 0"
+            class="text-center py-5"
+          >
+
+            <h3 class="h5 fw-bold">
+              No questions found
+            </h3>
+
+            <p class="mb-0">
+              Try searching with another word or phrase.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
