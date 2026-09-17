@@ -244,45 +244,6 @@
 }
 
 
-/* =========================================
-   CTA BUTTON
-========================================= */
-
-.cta-button {
-  display: inline-flex;
-
-  align-items: center;
-  justify-content: center;
-
-  padding: 14px 22px;
-
-  background: var(--accent);
-
-  color: var(--text);
-
-  font-family: var(--font-subtitle);
-
-  font-size: 12px;
-  font-weight: 700;
-
-  letter-spacing: 0.8px;
-
-  text-decoration: none;
-
-  border-radius: 2px;
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-
-.cta-button:hover {
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 8px 20px rgba(47, 52, 55, 0.15);
-}
 
 
 /* =========================================

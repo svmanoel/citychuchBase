@@ -1,8 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+/* =====================================================
+   GLOBAL STYLES
+   City Church Liverpool
+===================================================== */
+
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&family=Red+Hat+Display:wght@400;500;600;700&display=swap');
 
+
+/* =====================================================
+   ROOT VARIABLES
+===================================================== */
+
 :root {
+
   /* Colours */
+
   --primary: #71B9BE;
   --accent: #FFEB3B;
   --coral: #F26B5E;
@@ -10,8 +21,221 @@
   --text: #2F3437;
   --background: #FAF8F2;
 
+
   /* Fonts */
+
   --font-title: 'League Spartan', sans-serif;
   --font-subtitle: 'Red Hat Display', sans-serif;
   --font-body: 'Open Sans', sans-serif;
+}
+
+
+/* =====================================================
+   GLOBAL BODY
+===================================================== */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--background);
+
+  color: var(--text);
+
+  font-family: var(--font-body);
+}
+
+
+/* =====================================================
+   GLOBAL HEADINGS
+===================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-title);
+
+  color: var(--text);
+}
+
+
+/* =====================================================
+   GLOBAL LINKS
+===================================================== */
+
+a {
+  color: inherit;
+}
+
+
+/* =====================================================
+   GLOBAL CTA BUTTON
+===================================================== */
+
+.cta-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 22px;
+
+  background: var(--accent);
+
+  color: var(--text);
+
+  font-family: var(--font-subtitle);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+
+  text-decoration: none;
+
+  border: 2px solid var(--accent);
+  border-radius: 3px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+
+.cta-button:hover {
+  background: var(--accent);
+
+  color: var(--text);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(47, 52, 55, 0.15);
+}
+
+
+/* =====================================================
+   GLOBAL PRIMARY BUTTON
+===================================================== */
+
+.primary-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 22px;
+
+  background: var(--primary);
+
+  color: var(--text);
+
+  font-family: var(--font-subtitle);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+
+  text-decoration: none;
+
+  border: 2px solid var(--primary);
+  border-radius: 3px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.primary-button:hover {
+  background: var(--primary);
+
+  color: var(--text);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(47, 52, 55, 0.15);
+}
+
+
+/* =====================================================
+   GLOBAL FORM CONTROLS
+===================================================== */
+
+.form-control {
+  font-family: var(--font-body);
+
+  color: var(--text);
+
+  border-color: rgba(47, 52, 55, 0.15);
+
+  border-radius: 3px;
+}
+
+
+.form-control:focus {
+  color: var(--text);
+
+  border-color: var(--primary);
+
+  box-shadow:
+    0 0 0 0.2rem rgba(113, 185, 190, 0.18);
+}
+
+
+.form-control::placeholder {
+  color: rgba(47, 52, 55, 0.55);
+}
+
+
+/* =====================================================
+   GLOBAL SECTION LABEL
+===================================================== */
+
+.section-label {
+  font-family: var(--font-subtitle);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  color: var(--text);
+}
+
+
+/* =====================================================
+   GLOBAL IMAGE
+===================================================== */
+
+.img-fluid {
+  object-fit: cover;
+}
+
+
+/* =====================================================
+   GLOBAL SMOOTH TRANSITIONS
+===================================================== */
+
+a,
+button {
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }

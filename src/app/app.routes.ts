@@ -6,6 +6,7 @@ import { ServicesComponent } from './Component/Body/services/services.component'
 import { TeamComponent } from './Component/Body/team/team.component';
 import { BeliefsComponent } from './Component/Body/beliefs/beliefs.component';
 import { FaqsComponent } from './Component/Body/faqs/faqs.component';
+import { ContactComponent } from './Component/Body/contact/contact.component';
 
 
 export const routes: Routes = [
@@ -15,7 +16,9 @@ export const routes: Routes = [
   { path: 'connect', component: ConnectComponent },// load the diferents groups
   { path: 'services', component: ServicesComponent },// load the diferents sevices
   { path: 'beliefs', component: BeliefsComponent },// load the our beliefs
-  { path: 'faqs', component: FaqsComponent },// load the frequents questions 
+  { path: 'faqs', component: FaqsComponent },// load the frequents questions
+  { path: 'contact', component: ContactComponent },// load the ways to contact us
+  
 
 
   { path: '**', redirectTo: '' } // any invalid url  back to home
