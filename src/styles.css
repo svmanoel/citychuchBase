@@ -3,8 +3,12 @@
    City Church Liverpool
 ===================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&family=Red+Hat+Display:wght@400;500;600;700&display=swap');
 
+
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&family=Red+Hat+Display:wght@400;500;600;700&display=swap');
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../node_modules/bootstrap-icons/font/bootstrap-icons.min.css';
 
 /* =====================================================
    ROOT VARIABLES
