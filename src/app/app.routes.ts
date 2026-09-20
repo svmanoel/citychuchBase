@@ -7,6 +7,9 @@ import { TeamComponent } from './Component/Body/team/team.component';
 import { BeliefsComponent } from './Component/Body/beliefs/beliefs.component';
 import { FaqsComponent } from './Component/Body/faqs/faqs.component';
 import { ContactComponent } from './Component/Body/contact/contact.component';
+import { TermsComponent } from './Component/Body/terms/terms.component';
+import { PrivacyComponent } from './Component/Body/privacy/privacy.component';
+import { SermonsComponent } from './Component/Body/sermons/sermons.component';
 
 
 export const routes: Routes = [
@@ -18,6 +21,9 @@ export const routes: Routes = [
   { path: 'beliefs', component: BeliefsComponent },// load the our beliefs
   { path: 'faqs', component: FaqsComponent },// load the frequents questions
   { path: 'contact', component: ContactComponent },// load the ways to contact us
+  { path: 'terms', component: TermsComponent },// load the terms and conditions 
+  { path: 'privacy', component: PrivacyComponent },// load the Privacy  
+  { path: 'sermons', component: SermonsComponent },// load the Privacy 
   
 
 

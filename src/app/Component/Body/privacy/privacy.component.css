@@ -1,0 +1,381 @@
+/* =====================================================
+   PRIVACY POLICY
+===================================================== */
+
+.privacy-hero {
+  background-color: var(--background);
+}
+
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.privacy-introduction {
+  display: flex;
+  gap: 30px;
+
+  padding-bottom: 40px;
+
+  border-bottom:
+    1px solid rgba(47, 52, 55, 0.12);
+}
+
+.privacy-number,
+.privacy-card-number {
+  font-family: var(--font-title);
+
+  font-size: 15px;
+  font-weight: 700;
+
+  color: var(--primary);
+
+  letter-spacing: 1px;
+}
+
+.privacy-introduction h2,
+.privacy-card h2,
+.privacy-feature h2,
+.privacy-simple-card h2,
+.privacy-mini-section h2 {
+  font-family: var(--font-title);
+}
+
+.privacy-introduction p,
+.privacy-card p,
+.privacy-feature p,
+.privacy-simple-card p,
+.privacy-mini-section p,
+.privacy-rights p,
+.privacy-contact p,
+.privacy-document p {
+  font-family: var(--font-body);
+
+  line-height: 1.75;
+
+  color: var(--text);
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.privacy-card {
+  position: relative;
+
+  padding: 35px;
+
+  background: white;
+
+  border-radius: 8px;
+
+  border: 1px solid rgba(47, 52, 55, 0.08);
+
+  box-shadow:
+    0 10px 30px rgba(47, 52, 55, 0.06);
+}
+
+.privacy-card-accent {
+  background-color: var(--background);
+}
+
+.privacy-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 25px;
+
+  background-color: var(--primary);
+
+  color: white;
+
+  border-radius: 50%;
+
+  font-size: 21px;
+}
+
+.privacy-card-number {
+  display: block;
+
+  margin-bottom: 10px;
+}
+
+.privacy-list {
+  padding-left: 20px;
+
+  margin-bottom: 20px;
+}
+
+.privacy-list li {
+  margin-bottom: 8px;
+
+  font-family: var(--font-body);
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   FEATURE BLOCK
+========================================= */
+
+.privacy-feature {
+  display: flex;
+  gap: 30px;
+
+  padding: 40px;
+
+  background-color: var(--primary);
+
+  border-radius: 8px;
+}
+
+.privacy-feature-icon {
+  flex-shrink: 0;
+
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--accent);
+
+  color: var(--text);
+
+  border-radius: 50%;
+
+  font-size: 24px;
+}
+
+.privacy-feature p {
+  color: var(--text);
+}
+
+
+/* =========================================
+   SIMPLE CARDS
+========================================= */
+
+.privacy-simple-card {
+  padding: 35px;
+
+  background-color: var(--background);
+
+  border-radius: 8px;
+
+  border-left: 4px solid var(--primary);
+}
+
+.privacy-small-title {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-family: var(--font-subtitle);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  color: var(--primary);
+}
+
+
+/* =========================================
+   YOUR RIGHTS
+========================================= */
+
+.privacy-rights {
+  padding: 45px;
+
+  background-color: var(--text);
+
+  border-radius: 8px;
+
+  color: var(--background);
+}
+
+.privacy-rights h2 {
+  font-family: var(--font-title);
+}
+
+.privacy-rights p {
+  color: rgba(250, 248, 242, 0.8);
+}
+
+.privacy-rights-icon {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  background-color: var(--accent);
+
+  color: var(--text);
+
+  border-radius: 50%;
+
+  font-size: 24px;
+}
+
+.privacy-rights-list {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.privacy-rights-list li {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding: 15px 0;
+
+  border-bottom:
+    1px solid rgba(250, 248, 242, 0.15);
+
+  font-family: var(--font-body);
+
+  line-height: 1.6;
+
+  color: rgba(250, 248, 242, 0.9);
+}
+
+.privacy-rights-list li:last-child {
+  border-bottom: none;
+}
+
+.privacy-rights-list i {
+  color: var(--accent);
+
+  font-size: 20px;
+}
+
+
+/* =========================================
+   MINI SECTIONS
+========================================= */
+
+.privacy-mini-section {
+  height: 100%;
+
+  padding: 30px;
+
+  border-top:
+    3px solid var(--primary);
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.privacy-contact {
+  padding: 45px;
+
+  background-color: var(--primary);
+
+  border-radius: 8px;
+}
+
+.privacy-contact-details {
+  padding: 25px;
+
+  background-color: rgba(250, 248, 242, 0.65);
+
+  border-radius: 6px;
+}
+
+.privacy-contact-details a {
+  color: var(--text);
+
+  font-family: var(--font-body);
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.privacy-contact-details a:hover {
+  color: var(--primary);
+}
+
+
+/* =========================================
+   FULL DOCUMENT
+========================================= */
+
+.privacy-document {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 30px 35px;
+
+  background-color: var(--background);
+
+  border: 1px solid rgba(47, 52, 55, 0.12);
+
+  border-radius: 8px;
+}
+
+.privacy-document .cta-button {
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+  .privacy-introduction {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .privacy-card,
+  .privacy-simple-card {
+    padding: 28px;
+  }
+
+  .privacy-feature {
+    flex-direction: column;
+
+    padding: 30px;
+  }
+
+  .privacy-rights,
+  .privacy-contact {
+    padding: 30px;
+  }
+
+  .privacy-document {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .privacy-document .cta-button {
+    width: 100%;
+  }
+
+}

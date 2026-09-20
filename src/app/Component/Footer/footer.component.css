@@ -403,3 +403,38 @@
     transform: translateY(-3px);
     opacity: 0.8;
   }
+
+  /* =========================================
+   LEGAL LINKS
+========================================= */
+
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-legal a {
+  color: rgba(250, 248, 242, 0.5);
+
+  font-family: var(--font-body);
+  font-size: 12px;
+
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+.footer-legal a:hover {
+  color: var(--accent);
+}
+
+/*movil*/
+@media (max-width: 600px) {
+
+  .footer-legal {
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+
+}
