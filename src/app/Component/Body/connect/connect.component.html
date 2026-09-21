@@ -53,25 +53,17 @@
           explore the Bible and pray together.
         </p>
 
-        <button
-          type="button"
-          class="btn btn-outline-dark"
-          (click)="toggleSection('groups')">
-
+        <button type="button" class="btn btn-outline-dark" (click)="toggleSection('groups')">
           {{ activeSection === 'groups' ? 'SHOW LESS' : 'LEARN MORE' }}
-
         </button>
 
       </div>
 
 
       <div class="col-12 col-lg-6">
-
-        <img
-          src="assets/images/church-community.jpg"
-          class="img-fluid w-100 rounded"
-          alt="City Church Liverpool community">
-
+        <div class="image-container">
+          <img src="assets/images/homegroup.jpg" class="img-fluid w-50 rounded"  alt="City Church Liverpool Home Group">
+        </div>
       </div>
 
 
@@ -196,12 +188,9 @@
 
 
       <div class="col-12 col-lg-6 order-lg-1">
-
-        <img
-          src="assets/images/church-worship.jpg"
-          class="img-fluid w-100 rounded"
-          alt="City Church Liverpool worship">
-
+        <div class="image-container">
+          <img src="assets/images/alpha.jpg" class="img-fluid w-50 rounded"  alt="City Church Liverpool worship">
+        </div>
       </div>
 
 
@@ -276,12 +265,9 @@
 
 
       <div class="col-12 col-lg-6">
-
-        <img
-          src="assets/images/church-community.jpg"
-          class="img-fluid w-100 rounded"
-          alt="City Church Liverpool community">
-
+         <div class="image-container">
+          <img src="assets/images/children.jpg" class="img-fluid w-50 rounded"  alt="City Church Liverpool community">
+        </div>
       </div>
 
 
@@ -402,11 +388,10 @@
 
       <div class="col-12 col-lg-6 order-lg-1">
 
-        <img
-          src="assets/images/church-community.jpg"
-          class="img-fluid w-100 rounded"
-          alt="Young adults at City Church Liverpool">
-
+         <div class="image-container">
+          <img src="assets/images/youngadults.jpg" class="img-fluid w-50 rounded"  alt="Young adults at City Church Liverpool">
+        </div>
+         
       </div>
 
 
@@ -481,11 +466,9 @@
 
       <div class="col-12 col-lg-6">
 
-        <img
-          src="assets/images/church-community.jpg"
-          class="img-fluid w-100 rounded"
-          alt="Serving at City Church Liverpool">
-
+        <div class="image-container">
+          <img src="assets/images/service2.jpg" class="img-fluid w-50 rounded" alt="Serving at City Church Liverpool">
+        </div>
       </div>
 
 
@@ -554,13 +537,13 @@
           the right place to get involved.
         </p>
 
-        <a
+        <!-- <a
           routerLink="/visit"
           class="btn btn-dark">
 
           PLAN YOUR VISIT
 
-        </a>
+        </a> -->
 
       </div>
 

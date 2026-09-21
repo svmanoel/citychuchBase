@@ -228,6 +228,19 @@ a {
   object-fit: cover;
 }
 
+.image-container {
+  height: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 
 /* =====================================================
    GLOBAL SMOOTH TRANSITIONS
@@ -242,3 +255,5 @@ button {
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
+
+
