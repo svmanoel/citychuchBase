@@ -1,0 +1,53 @@
+.circle-title {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+
+/* Four available colours */
+
+.number-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 1rem;
+
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+/* Blue */
+.circle-blue {
+  background-color: #71B9BE;
+  color: #008EAB;
+}
+
+/* Yellow */
+.circle-yellow {
+  background-color: #F2D77A;
+  color: #D89A00;
+}
+
+/* Red */
+.circle-red {
+  background-color: #E7A5AD;
+  color: #D4142A;
+}
+
+/* Green */
+.circle-green {
+  background-color: #A8D5A2;
+  color: #4A9B45;
+}
