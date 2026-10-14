@@ -1,177 +1,342 @@
 /* =====================================================
-   SERMONS
+   SERMONS LIBRARY
 ===================================================== */
 
-.sermons-hero {
+.sermons-library {
   background-color: var(--background);
 }
 
-
-/* =====================================================
-   SPOTIFY CARD
-===================================================== */
-
-.spotify-card {
-  padding: 30px;
-
-  background-color: var(--text);
-
-  border-radius: 10px;
-
-  box-shadow:
-    0 15px 35px rgba(47, 52, 55, 0.12);
-}
-
-
-.spotify-card-header {
-  display: flex;
-
-  align-items: center;
-
-  gap: 18px;
-
-  margin-bottom: 25px;
-}
-
-
-.spotify-icon {
-  width: 55px;
-  height: 55px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  flex-shrink: 0;
-
-  background-color: var(--accent);
-
-  color: var(--text);
-
-  border-radius: 50%;
-
-  font-size: 27px;
-}
-
-
-.spotify-label {
-  font-family: var(--font-subtitle);
-
-  font-size: 11px;
-
-  font-weight: 700;
-
-  letter-spacing: 1.5px;
-
+.sermons-spinner {
   color: var(--primary);
 }
 
+.sermons-player-card,
+.sermons-list-card {
+  padding: 28px;
+  border-radius: 12px;
+  border: 1px solid rgba(47, 52, 55, 0.08);
+  box-shadow: 0 12px 30px rgba(47, 52, 55, 0.06);
+}
 
-.spotify-card h3 {
+.sermons-player-card {
+  background-color: var(--text);
   color: var(--background);
 }
 
-
-/* =====================================================
-   SPOTIFY PLAYER
-===================================================== */
-
-.spotify-player {
-  overflow: hidden;
-
-  border-radius: 8px;
-
+.sermons-list-card {
   background-color: #ffffff;
 }
 
-
-.spotify-player iframe {
-  display: block;
-
-  border: 0;
-}
-
-
-/* =====================================================
-   INFO CARDS
-===================================================== */
-
-.sermon-info-card {
-  padding: 35px;
-
-  background-color: var(--background);
-
-  border: 1px solid rgba(47, 52, 55, 0.08);
-
-  border-radius: 8px;
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-
-.sermon-info-card:hover {
-  transform: translateY(-5px);
-
-  box-shadow:
-    0 12px 30px rgba(47, 52, 55, 0.08);
-}
-
-
-.sermon-info-icon {
+.sermons-player-icon {
   width: 52px;
   height: 52px;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
-
-  margin-bottom: 25px;
-
-  background-color: var(--primary);
-
-  color: var(--text);
-
+  flex-shrink: 0;
   border-radius: 50%;
-
-  font-size: 21px;
+  background-color: var(--accent);
+  color: var(--text);
+  font-size: 26px;
 }
 
+.sermons-player-label {
+  color: var(--primary);
+  font-family: var(--font-subtitle);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
 
-.sermon-info-card p {
+.sermons-cover {
+  display: block;
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.sermons-cover-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  background-color: rgba(113, 185, 190, 0.15);
+  color: var(--primary);
+  font-size: 60px;
+}
+
+.sermons-description {
+  color: rgba(250, 248, 242, 0.78);
+  font-size: 14px;
   line-height: 1.7;
+  max-height: 100px;
+  overflow-y: auto;
 }
 
+.sermons-player-card audio {
+  display: block;
+  width: 100%;
+}
 
-/* =====================================================
-   CTA
-===================================================== */
+.sermons-player-card iframe {
+  display: block;
+  border: 0;
+  border-radius: 8px;
+}
 
-.sermons-cta {
+.sermons-control {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--background);
+  font-size: 26px;
+  transition: background-color 0.2s ease;
+}
+
+.sermons-control:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.sermons-control:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.sermons-control-main {
+  width: 54px;
+  height: 54px;
+  background-color: var(--accent);
+  color: var(--text);
+  font-size: 30px;
+}
+
+.sermons-control-main:hover {
   background-color: var(--primary);
 }
 
-
-.sermons-cta .section-label {
-  color: var(--text);
+.sermons-progress {
+  background-color: var(--primary);
 }
 
+.sermons-episode-list {
+  max-height: 550px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.sermons-episode-item {
+  display: block;
+  padding: 16px 12px;
+  border: 0;
+  border-bottom: 1px solid rgba(47, 52, 55, 0.09);
+  background-color: transparent;
+  color: var(--text);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.sermons-episode-item:hover {
+  background-color: rgba(113, 185, 190, 0.10);
+}
+
+.sermons-episode-item.active {
+  background-color: rgba(113, 185, 190, 0.18);
+  border-left: 4px solid var(--primary);
+}
+
+.sermons-episode-number {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--background);
+  color: var(--text);
+  font-weight: 700;
+}
+
+.sermons-episode-item.active .sermons-episode-number {
+  background-color: var(--primary);
+}
+
+.sermons-episode-title {
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.sermons-episode-date {
+  color: #6c757d;
+  font-size: 12px;
+}
+
+.sermons-episode-play {
+  flex-shrink: 0;
+  font-size: 23px;
+  color: var(--primary);
+}
+
+.sermons-list-card .form-select {
+  border-color: rgba(47, 52, 55, 0.18);
+}
+
+.sermons-list-card .form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(113, 185, 190, 0.2);
+}
 
 /* =====================================================
    MOBILE
 ===================================================== */
 
 @media (max-width: 767px) {
-
-  .spotify-card {
+  .sermons-player-card,
+  .sermons-list-card {
     padding: 20px;
   }
 
-  .spotify-player iframe {
-    height: 352px;
+  .sermons-episode-list {
+    max-height: 450px;
   }
 
+  .sermons-cover {
+    max-height: 240px;
+  }
+}
+
+/* Audio player layout */
+.sermons-player-card {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: var(--text);
+  color: #fff;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+
+.sermons-cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+.sermons-audio-player audio {
+  width: 100%;
+}
+
+.sermons-control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  font-size: 1.25rem;
+  transition: background-color 0.2s ease;
+}
+
+.sermons-control:hover:not(:disabled) {
+  background: var(--primary);
+  color: var(--text);
+}
+
+.sermons-control:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (max-width: 991.98px) {
+  .sermons-player-card,
+  .sermons-list-card {
+    height: auto !important;
+  }
+}
+
+/* Custom audio player */
+.sermons-audio-player {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.sermons-progress {
+  cursor: pointer;
+  accent-color: var(--primary);
+}
+
+.sermons-controls {
+  gap: 0.35rem;
+}
+
+.sermons-control {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1 48px;
+  min-width: 0;
+  height: 46px;
+  padding: 0.25rem;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.5rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sermons-control:hover {
+  background: var(--primary);
+  color: var(--text);
+}
+
+.sermons-control-main {
+  flex: 0 0 54px;
+  height: 54px;
+  background: var(--primary);
+  font-size: 2rem;
+}
+
+.sermons-control-main:hover {
+  background: var(--accent);
+}
+
+.control-seconds {
+  position: absolute;
+  font-size: 0.6rem;
+  font-weight: 700;
+  line-height: 1;
+  bottom: 9px;
+}
+
+@media (max-width: 380px) {
+  .sermons-control {
+    font-size: 1.25rem;
+    height: 40px;
+  }
+
+  .sermons-control-main {
+    flex-basis: 46px;
+    height: 46px;
+    font-size: 1.75rem;
+  }
 }
