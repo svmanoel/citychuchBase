@@ -261,10 +261,12 @@
 
         </div>
 
-
         <!-- FORM -->
 
-        <form>
+        <form
+          #contactForm="ngForm"
+          (ngSubmit)="sendMessage(contactForm)"
+          novalidate>
 
           <!-- NAME + EMAIL -->
 
@@ -272,43 +274,56 @@
 
             <div class="col-12 col-md-6">
 
-              <label
-                for="name"
-                class="form-label fw-bold">
-
-                Your Name
-
+              <label for="name" class="form-label fw-bold">
+                Your Name *
               </label>
 
               <input
                 type="text"
                 id="name"
+                name="name"
                 class="form-control"
-                placeholder="Your name">
+                placeholder="Your name"
+                [(ngModel)]="contact.name"
+                #name="ngModel"
+                required
+                maxlength="100">
+
+              <div
+                class="text-danger small mt-1"
+                *ngIf="name.invalid && (name.touched || contactForm.submitted)">
+                Please enter your name.
+              </div>
 
             </div>
 
-
             <div class="col-12 col-md-6">
 
-              <label
-                for="email"
-                class="form-label fw-bold">
-
-                Email Address
-
+              <label for="email" class="form-label fw-bold">
+                Email Address *
               </label>
 
               <input
                 type="email"
                 id="email"
+                name="email"
                 class="form-control"
-                placeholder="you@example.com">
+                placeholder="you@example.com"
+                [(ngModel)]="contact.email"
+                #email="ngModel"
+                required
+                email
+                maxlength="150">
+
+              <div
+                class="text-danger small mt-1"
+                *ngIf="email.invalid && (email.touched || contactForm.submitted)">
+                Please enter a valid email address.
+              </div>
 
             </div>
 
           </div>
-
 
           <!-- PHONE + SUBJECT -->
 
@@ -316,64 +331,95 @@
 
             <div class="col-12 col-md-6">
 
-              <label
-                for="phone"
-                class="form-label fw-bold">
-
+              <label for="phone" class="form-label fw-bold">
                 Phone Number
-
               </label>
 
               <input
                 type="tel"
                 id="phone"
+                name="phoneNumber"
                 class="form-control"
-                placeholder="Your phone number">
+                placeholder="Your phone number"
+                [(ngModel)]="contact.phoneNumber"
+                maxlength="30">
 
             </div>
 
-
             <div class="col-12 col-md-6">
 
-              <label
-                for="subject"
-                class="form-label fw-bold">
-
-                Subject
-
+              <label for="subject" class="form-label fw-bold">
+                Subject *
               </label>
 
               <input
                 type="text"
                 id="subject"
+                name="subject"
                 class="form-control"
-                placeholder="How can we help?">
+                placeholder="How can we help?"
+                [(ngModel)]="contact.subject"
+                #subject="ngModel"
+                required
+                maxlength="150">
+
+              <div
+                class="text-danger small mt-1"
+                *ngIf="subject.invalid && (subject.touched || contactForm.submitted)">
+                Please enter a subject.
+              </div>
 
             </div>
 
           </div>
 
-
           <!-- MESSAGE -->
 
           <div class="mb-3">
 
-            <label
-              for="message"
-              class="form-label fw-bold">
-
-              Your Message
-
+            <label for="message" class="form-label fw-bold">
+              Your Message *
             </label>
 
             <textarea
               id="message"
+              name="message"
               rows="5"
               class="form-control"
-              placeholder="Write your message here..."></textarea>
+              placeholder="Write your message here..."
+              [(ngModel)]="contact.message"
+              #message="ngModel"
+              required
+              maxlength="5000">
+            </textarea>
+
+            <div
+              class="text-danger small mt-1"
+              *ngIf="message.invalid && (message.touched || contactForm.submitted)">
+              Please enter your message.
+            </div>
 
           </div>
 
+          <!-- SUCCESS MESSAGE -->
+
+          <div
+            *ngIf="successMessage"
+            class="alert alert-success"
+            role="alert">
+            <i class="bi bi-check-circle me-2"></i>
+            {{ successMessage }}
+          </div>
+
+          <!-- ERROR MESSAGE -->
+
+          <div
+            *ngIf="errorMessage"
+            class="alert alert-danger"
+            role="alert">
+            <i class="bi bi-exclamation-circle me-2"></i>
+            {{ errorMessage }}
+          </div>
 
           <!-- BUTTON -->
 
@@ -381,13 +427,24 @@
 
             <button
               type="submit"
-              class="cta-button">
+              class="cta-button"
+              [disabled]="isSending">
 
-              Send Message
+              <span
+                *ngIf="isSending"
+                class="spinner-border spinner-border-sm me-2"
+                aria-hidden="true">
+              </span>
+
+              {{ isSending ? 'Sending...' : 'Send Message' }}
 
             </button>
 
           </div>
+
+          <p class="text-muted small text-center mt-3 mb-0">
+            * Required fields
+          </p>
 
         </form>
 

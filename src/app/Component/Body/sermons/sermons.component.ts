@@ -42,7 +42,7 @@ export class SermonsComponent implements OnInit, OnDestroy {
   // =====================================================
 
   private readonly apiUrl =
-    'http://apichurch.runasp.net/api/spotify/podcast/episodes';
+    'https://api.citychurchliverpool.org/api/spotify/podcast/episodes';
 
   private readonly pageSize = 20;
 
