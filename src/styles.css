@@ -20,6 +20,13 @@
   --primary: #71B9BE;
   --accent: #FFEB3B;
   --coral: #F26B5E;
+  
+
+  --blue: #008EAB;
+  --yellow:#F2D77A;
+  --pink: #E7A5AD;
+  --green:#A8D5A2;
+  --deepgreen: #4A9B45;
 
   --text: #2F3437;
   --background: #FAF8F2;
@@ -242,6 +249,7 @@ a {
 }
 
 
+
 /* =====================================================
    GLOBAL SMOOTH TRANSITIONS
 ===================================================== */
@@ -256,4 +264,22 @@ button {
     box-shadow 0.25s ease;
 }
 
+
+
+/* =====================================================
+  Card tops
+===================================================== */
+
+.topyellow {
+  border-top: 4px solid var(--accent, --yellow) !important;
+}
+.topblue {
+  border-top: 4px solid var(--primary, --blue) !important;
+}
+.topgreen {
+  border-top: 4px solid var(--deepgreen, --green) !important;
+}
+.toppink{
+  border-top: 4px solid var(--coral, --pink) !important;
+}
 

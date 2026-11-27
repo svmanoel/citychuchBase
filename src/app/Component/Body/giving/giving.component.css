@@ -97,7 +97,7 @@
 }
 
 .gift-aid-card {
-  border-top: 4px solid var(--accent, #FFEB3B) !important;
+  border-top: 4px solid var(--accent, --yellow) !important;
 }
 
 /* Contact */
@@ -125,4 +125,4 @@
     font-size: 0.82rem;
   }
 
-}
+}   
