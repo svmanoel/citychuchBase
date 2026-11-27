@@ -10,6 +10,7 @@ import { ContactComponent } from './Component/Body/contact/contact.component';
 import { TermsComponent } from './Component/Body/terms/terms.component';
 import { PrivacyComponent } from './Component/Body/privacy/privacy.component';
 import { SermonsComponent } from './Component/Body/sermons/sermons.component';
+import { GivingComponent } from './Component/Body/giving/giving.component';
 
 
 export const routes: Routes = [
@@ -23,7 +24,8 @@ export const routes: Routes = [
   { path: 'contact', component: ContactComponent },// load the ways to contact us
   { path: 'terms', component: TermsComponent },// load the terms and conditions 
   { path: 'privacy', component: PrivacyComponent },// load the Privacy  
-  { path: 'sermons', component: SermonsComponent },// load the Privacy 
+  { path: 'sermons', component: SermonsComponent },// load the Sermoons
+  { path: 'donations', component: GivingComponent },// load the Donations  
   
 
 

@@ -1,0 +1,128 @@
+/* =====================================================
+   GIVING PAGE
+===================================================== */
+
+.giving-page {
+  background-color: var(--background, #FAF8F2);
+  color: var(--text, #2F3437);
+}
+
+.section-label {
+  color: var(--primary, #71B9BE);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+/* Online Giving */
+
+.online-giving {
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: white;
+}
+
+.online-giving-content {
+  background-color: var(--primary, #71B9BE);
+  color: #fff;
+  height: 100%;
+}
+
+.online-giving-content .section-label {
+  color: #fff;
+}
+
+.online-giving-image {
+  min-height: 320px;
+}
+
+.online-giving-image img {
+  object-fit: cover;
+  min-height: 320px;
+}
+
+.btn-giving {
+  background-color: var(--accent, #FFEB3B);
+  color: var(--text, #2F3437);
+  border: none;
+  font-weight: 600;
+}
+
+.btn-giving:hover {
+  background-color: #f5dc24;
+  color: var(--text, #2F3437);
+}
+
+/* Giving Cards */
+
+.giving-card {
+  border-radius: 1rem;
+  background-color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.giving-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08) !important;
+}
+
+.giving-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(113, 185, 190, 0.18);
+  color: var(--text, #2F3437);
+  font-size: 1.5rem;
+}
+
+.bank-details {
+  background-color: var(--background, #FAF8F2);
+  font-size: 0.9rem;
+}
+
+.bank-details span {
+  color: #6c757d;
+}
+
+.bank-details strong {
+  text-align: right;
+}
+
+.giving-note {
+  background-color: rgba(113, 185, 190, 0.12);
+  font-size: 0.9rem;
+}
+
+.gift-aid-card {
+  border-top: 4px solid var(--accent, #FFEB3B) !important;
+}
+
+/* Contact */
+
+.giving-contact {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Mobile */
+
+@media (max-width: 767.98px) {
+
+  .giving-page {
+    padding-top: 2rem !important;
+  }
+
+  .online-giving-image,
+  .online-giving-image img {
+    min-height: 220px;
+    max-height: 260px;
+  }
+
+  .bank-details {
+    font-size: 0.82rem;
+  }
+
+}
